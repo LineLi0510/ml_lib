@@ -151,7 +151,7 @@ class CorrelationCalculator:
     ) -> pd.DataFrame:
         """
         Ermittelt Matrix der Rangkorrelationen nach Kendall oder Sprearman für ordinale Merkmale oder
-        kardinaler Merkmale, die keinen linearen Zsuammenhang aufweisen
+        kardinaler Merkmale, die keinen linearen Zusammenhang aufweisen
         Kendall tau für Merkmale mit vielen Bindungen, Spearman, wenn wenige Bindungen vorliegen.
 
         :param df: Dataframe to calculate correlation for
