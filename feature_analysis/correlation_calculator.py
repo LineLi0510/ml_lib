@@ -98,9 +98,8 @@ class CorrelationCalculator:
                 df_corr[col1].loc[col2] = cramers_v
         return df_corr
 
-
+    @staticmethod
     def pearson_corr(
-            self,
             feature1: pd.Series,
             feature2: pd.Series
     ) -> float:
@@ -114,8 +113,8 @@ class CorrelationCalculator:
         """
         return feature1.corr(feature2, method='pearson')
 
+    @staticmethod
     def pearson_corr_matrix(
-            self,
             df: pd.DataFrame
     ) -> pd.DataFrame:
         """
@@ -127,8 +126,8 @@ class CorrelationCalculator:
         """
         return df.corr(method='pearson')
 
+    @staticmethod
     def rank_corr(
-            self,
             feature1: pd.Series,
             feature2: pd.Series,
             method: str
@@ -145,14 +144,14 @@ class CorrelationCalculator:
         """
         return feature1.corr(feature2, method=method)
 
+    @staticmethod
     def rank_corr_matrix(
-            self,
             df: pd.DataFrame,
             method: str
     ) -> pd.DataFrame:
         """
-        Ermittelt Matrix der Rangkorrelationen nach Kendall oder Sprearman für ordinale Merkmale oder kardinaler Merkmale,
-        die keinen linearen Zsuammenhang aufweisen
+        Ermittelt Matrix der Rangkorrelationen nach Kendall oder Sprearman für ordinale Merkmale oder
+        kardinaler Merkmale, die keinen linearen Zsuammenhang aufweisen
         Kendall tau für Merkmale mit vielen Bindungen, Spearman, wenn wenige Bindungen vorliegen.
 
         :param df: Dataframe to calculate correlation for
